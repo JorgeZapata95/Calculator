@@ -11,10 +11,7 @@ pipeline {
           stage('metricas') {
             steps {
                 echo 'subiendo las metricas'
-                bat 'cd D:\Jorge\Downloads\Programas\sonarqube-6.5\bin\windows-x86-64'
-                bat './StartSonar.bat'
                 echo 'El servidor SonarQube debe estar arriba'
-                bat 'cmd D:\Jorge\Dropbox\Udea\2017-1\Proyecto Integrador I\workspace\Calculadora'
                 bat './gradlew sonarqube'
             }
         }
